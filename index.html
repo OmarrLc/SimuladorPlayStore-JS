@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazon Appstore</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <button data-toggle="modal" data-target="#exampleModal" class="btn btn-success my-2 my-sm-0 my-2 my-sm-0" onclick="nuevaApp()" type="button">Nueva Aplicacion</button>
+            </form>
+        </div>
+    </nav>
+
+    <main role="main" class="container-fluid">
+
+        <div class="starter-template">
+            <select class="form-control mb-4" id="categoria" onchange="cargarAplicaciones(this.value);">
+                
+            </select>
+
+            <div>
+                <div class="row" id="aplicaciones">
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- /.container -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" id="carruselApp">
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div style="padding:0;" class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-4">
+                                <div data-toggle="modal" data-target="#exampleModal" id="imagenApp">
+
+                                </div>
+                            </div>
+                            <div style="padding:0;" class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 mb-8" id="contenidoNuevo">
+                                <div class="card-body ta-left" id="contenidoApp">
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row" id="comentariosApp">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="instalar" type="button" class="btn btn-success">Instalar</button>
+                        <button id="guardar" type="button" class="btn btn-primary" onclick="guardarApp()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fin de Ventana Modal -->
+
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/controlador.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+    padding-top: 5rem;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.navbar {
+    background-color: black!important;
+}
+
+.card {
+    text-align: initial!important;
+}
+
+.card:hover {
+    background: #FFC319;
+    color: white;
+}
+
+.card-img-top {
+    padding: 1em!important;
+}
+
+hr {
+    margin: 0;
+}
